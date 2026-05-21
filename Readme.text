@@ -1,0 +1,22 @@
+# Interactive University Registration System
+
+A Python-based terminal application that allows students to register for different types of courses and calculates their total tuition. This project demonstrates the practical application of four core Object-Oriented Programming (OOP) principles.
+
+## Features
+* **Terminal Interface:** Interactive menu for adding courses and viewing schedules.
+* **Course Types:** Support for both Practical Labs (which include equipment fees) and Theoretical Lectures.
+* **Dynamic Tuition Calculation:** Automatically calculates the correct tuition cost based on the specific type of course added.
+* **Data Validation:** Prevents invalid data entry (e.g., negative credit hours).
+
+## OOP Concepts Demonstrated
+1. **Abstraction:** A `Course` abstract base class provides a blueprint for all courses, forcing child classes to implement the `calculate_tuition()` method.
+2. **Inheritance:** `PracticalLab` and `TheoreticalLecture` classes inherit baseline properties (ID, name, credits) from the `Course` parent class but add their own specific attributes (equipment fees, hall capacities).
+3. **Encapsulation:** Credit hours are stored as a private attribute (`__credit_hours`) and can only be modified through a setter method that enforces validation rules (must be an integer between 1 and 6).
+4. **Smart Behavior (Polymorphism):** The `StudentSchedule` class calculates total tuition by looping through a list of courses and calling `calculate_tuition()` on each. Whether the course is a Lab or a Lecture, Python knows which specific calculation formula to execute.
+
+## How to Run
+1. Ensure you have Python 3.x installed on your machine.
+2. Clone this repository to your local machine.
+3. Open your terminal or command prompt.
+4. Navigate to the folder containing the script.
+5. Run the command: `python main.py`
